@@ -110,6 +110,14 @@
                              (:file "optionalt")
                              (:file "free")
                              (:file "freet")))
+               ;; Unfortunately this had to be split from the rest of the
+               ;; experimental files because of intermediate dependencies.
+               (:module "experimental-do-control"
+                :pathname "experimental/"
+                :serial t
+                :components ((:file "do-control-core")
+                             (:file "do-control-loops")
+                             (:file "do-control-loops-adv")))
                (:file "ordtree")
                (:file "ordmap")
                (:file "seq")
@@ -307,6 +315,8 @@
                (:file "vector-tests")
                (:file "string-tests")
                (:file "optional-tests")
+               (:file "ordtree-tests")
+               (:file "ordmap-tests")
                (:file "recursive-let-tests")
                (:file "class-tests")
                (:file "struct-tests")
@@ -333,4 +343,3 @@
                (:module "algorithms-tests"
                 :serial t
                 :components ((:file "fft-tests")))))
-
